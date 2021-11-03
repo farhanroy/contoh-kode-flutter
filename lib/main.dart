@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_belajar/container/tutorial4_container.dart';
+import 'package:flutter_belajar/7_row_column.dart';
+
+import '6_container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("Flutter"),
       ),
-      body: BelajarContainer(),
+      body: BelajarRowColumn(),
     );
   }
 }
