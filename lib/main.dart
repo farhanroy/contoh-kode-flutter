@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_belajar/7_row_column.dart';
+import 'package:flutter_belajar/8_stack.dart';
+import 'package:flutter_belajar/9_grid.dart';
 
 import '6_container.dart';
 
@@ -36,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("Flutter"),
       ),
-      body: BelajarRowColumn(),
+      body: BelajarGrid(),
     );
   }
 }
