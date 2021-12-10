@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_belajar/10_button.dart';
-import 'package:flutter_belajar/13_appbar.dart';
-import 'package:flutter_belajar/7_row_column.dart';
-import 'package:flutter_belajar/8_stack.dart';
-import 'package:flutter_belajar/9_grid.dart';
+import 'package:flutter_belajar/14_alert.dart';
 
-import '6_container.dart';
+import '16_hero.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const BelajarAppbar(),
+      home: BelajarHero(),
     );
   }
 }
@@ -40,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("Flutter"),
       ),
-      body: BelajarButton(),
+      body: BelajarAlertDialog(),
     );
   }
 }

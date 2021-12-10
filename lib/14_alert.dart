@@ -6,11 +6,7 @@ class BelajarAlertDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Flutter Code Sample"),
-      ),
-    );
+    return _ContohAlertRflutter();
   }
 }
 
@@ -78,6 +74,7 @@ class _ContohFormDialog extends StatelessWidget {
     return AlertDialog(
       title: Text("Login form"),
       content: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           TextField(
             decoration: InputDecoration(
@@ -113,17 +110,17 @@ class _ContohAlertRflutter extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ElevatedButton(
-            onPressed: () {},
+            onPressed: () => _alertSuccess(context),
             child: Text("Alert Success")
         ),
 
         ElevatedButton(
-            onPressed: () {},
+            onPressed: () => _alertError(context),
             child: Text("Alert Error")
         ),
 
         ElevatedButton(
-            onPressed: () {},
+            onPressed: () => _alertInfo(context),
             child: Text("Alert Info")
         )
       ],
@@ -168,7 +165,7 @@ class _ContohAlertRflutter extends StatelessWidget {
   _alertInfo(context) async {
     Alert(
       context: context,
-      type: AlertType.success,
+      type: AlertType.info,
       title: "Info",
       desc: "Ini hanya sekedar info",
       buttons: [
