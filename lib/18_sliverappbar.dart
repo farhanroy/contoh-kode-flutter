@@ -51,46 +51,50 @@ class _ContohSliverTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: NestedScrollView(
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-          return <Widget>[
-            SliverAppBar(
-              expandedHeight: 200.0,
-              floating: false,
-              pinned: true,
-              flexibleSpace: FlexibleSpaceBar(
-                centerTitle: true,
-                title: Text("SliverAppBar",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
-                    )),
-                background: Image(
-                  image: NetworkImage('https://pict-c.sindonews.net/dyn/620/pena/news/2021/12/11/207/625563/bill-gates-3-tahun-lagi-anda-akan-mulai-ngantor-di-metaverse-nrt.jpg'),
-                  fit: BoxFit.cover,
+      body: DefaultTabController(
+        length: 3,
+        child: NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return <Widget>[
+              SliverAppBar(
+                expandedHeight: 200.0,
+                floating: false,
+                pinned: true,
+                flexibleSpace: FlexibleSpaceBar(
+                  centerTitle: true,
+                  title: Text("SliverAppBar",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      )),
+                  background: Image(
+                    image: NetworkImage('https://pict-c.sindonews.net/dyn/620/pena/news/2021/12/11/207/625563/bill-gates-3-tahun-lagi-anda-akan-mulai-ngantor-di-metaverse-nrt.jpg'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-            ),
-            SliverPersistentHeader(
-              delegate: _SliverAppBarDelegate(
-                TabBar(
-                  tabs: [
-                    Tab(icon: Icon(Icons.flight)),
-                    Tab(icon: Icon(Icons.directions_transit)),
-                    Tab(icon: Icon(Icons.directions_car)),
-                  ],
+              SliverPersistentHeader(
+                delegate: _SliverAppBarDelegate(
+                  TabBar(
+                    indicatorColor: Colors.black87,
+                    tabs: [
+                      Tab(icon: Icon(Icons.flight, color: Colors.black87,)),
+                      Tab(icon: Icon(Icons.directions_transit, color: Colors.black87)),
+                      Tab(icon: Icon(Icons.directions_car, color: Colors.black87)),
+                    ],
+                  ),
                 ),
+                pinned: true,
               ),
-              pinned: false,
-            ),
-          ];
-        },
-        body: TabBarView(
-          children: [
-            Icon(Icons.flight, size: 350),
-            Icon(Icons.directions_transit, size: 350),
-            Icon(Icons.directions_car, size: 350),
-          ],
+            ];
+          },
+          body: TabBarView(
+            children: [
+              Icon(Icons.flight, size: 350),
+              Icon(Icons.directions_transit, size: 350),
+              Icon(Icons.directions_car, size: 350),
+            ],
+          ),
         ),
       ),
     );
