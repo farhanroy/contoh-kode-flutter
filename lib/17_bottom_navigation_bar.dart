@@ -26,23 +26,10 @@ class _BelajarBottomNavBarState extends State<BelajarBottomNavBar> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Beranda',
-
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
-            label: 'Pesanan',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
-            label: 'Inbox',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Pengaturan',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda',),
+          BottomNavigationBarItem(icon: Icon(Icons.assignment), label: 'Pesanan',),
+          BottomNavigationBarItem(icon: Icon(Icons.mail), label: 'Inbox',),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Pengaturan',),
         ],
         currentIndex: _selectedNavbar,
         selectedItemColor: Colors.purple,
@@ -54,8 +41,6 @@ class _BelajarBottomNavBarState extends State<BelajarBottomNavBar> {
   }
 
   void _changeSelectedNavBar(int index) {
-    setState(() {
-      _selectedNavbar = index;
-    });
+    setState(() {_selectedNavbar = index;});
   }
 }
