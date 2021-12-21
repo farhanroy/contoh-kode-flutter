@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_belajar/14_alert.dart';
 import 'package:flutter_belajar/18_sliverappbar.dart';
+import 'package:flutter_belajar/21_snackbar.dart';
 
 import '16_hero.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BelajarSliverAppbar(),
+      home: BelajarSnackBar(),
     );
   }
 }
