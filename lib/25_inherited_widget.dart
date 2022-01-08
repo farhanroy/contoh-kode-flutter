@@ -28,12 +28,15 @@ class BelajarInheritedWidget extends StatelessWidget {
     return Scaffold(
       body: ColorState(
         color: Colors.red,
-        child: Column(
-          children: [
-            _Widget1(),
-            const SizedBox(height: 8),
-            _Widget2(),
-          ],
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _Widget1(),
+              const SizedBox(height: 8),
+              _Widget2(),
+            ],
+          ),
         ),
       ),
     );
