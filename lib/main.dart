@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_belajar/14_alert.dart';
 import 'package:flutter_belajar/26_provider.dart';
+import 'package:flutter_belajar/27_key.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BelajarProvider(),
+      home: BelajarKey(),
     );
   }
 }
