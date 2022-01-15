@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_belajar/14_alert.dart';
 import 'package:flutter_belajar/26_provider.dart';
 import 'package:flutter_belajar/27_key.dart';
+import 'package:flutter_belajar/29_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BelajarKey(),
+      home: BelajarBuilder(),
     );
   }
 }
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("Flutter"),
       ),
-      body: BelajarAlertDialog(),
+      body: BelajarBuilder(),
     );
   }
 }
