@@ -12,7 +12,9 @@ class BelajarBuilder extends StatelessWidget {
             return ElevatedButton(
               child: Text('Show'),
               onPressed: () {
-                print(Scaffold.of(context).hasAppBar);
+
+                Scaffold.of(context).hasAppBar;
+
               },
             );
           }
