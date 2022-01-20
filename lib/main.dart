@@ -3,6 +3,7 @@ import 'package:flutter_belajar/14_alert.dart';
 import 'package:flutter_belajar/26_provider.dart';
 import 'package:flutter_belajar/27_key.dart';
 import 'package:flutter_belajar/29_builder.dart';
+import 'package:flutter_belajar/rest_api/get_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BelajarBuilder(),
+      home: BelajarHttpGet(),
     );
   }
 }
